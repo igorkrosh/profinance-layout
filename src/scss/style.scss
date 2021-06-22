@@ -383,6 +383,7 @@ section.yes__no__section
 
 section.what_you_get
 {
+    margin-top: 80px;
     .container
     {
         padding-bottom: 80px;
@@ -488,6 +489,53 @@ section.what_you_get
                     background: #fbd480;
                 }
             }
+        }
+    }
+}
+
+section.banner__section
+{
+    background: url(../images/bg/banner_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+    padding-bottom: 80px;
+
+    .banner
+    {
+        position: relative;
+        background: #fff;
+        padding: 40px;
+        padding-right: 420px;
+        width: 80%;
+        margin: auto;
+
+        h2
+        {
+            margin: 0;
+
+            b
+            {
+                font-size: 32px;
+                background: #0567e0;
+                padding:0 5px;
+                color: #fff;
+            }
+        }
+
+        .person
+        {
+            position: absolute;
+            right: 40px;
+            bottom: 0;
+        }
+
+        .blue
+        {
+            margin: 20px 0;
+            font-weight: 700;
+            font-size: 20px;
+            color: #0567e0;
         }
     }
 }
