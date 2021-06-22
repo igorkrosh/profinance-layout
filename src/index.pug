@@ -6,14 +6,45 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title ProFinance
         include pug/head.pug
     body
-        .container
-            h1 Hi from PUG! 
-            +InputRadio('name', 'test')
-            
-            +Modal('test', 'ModalTemplate')
-            button(modal="test") Modal Test
+        header
+            .container
+                .logo
+                    img(src="assets/images/logo.png", alt="") 
+                .contacts__wrapper
+                    .col
+                        a(href="").contacts.address Нижний Новгород, ул. Дунаева, 19
+                        a(href="").contacts.tel +7 (986) 726-00-08
+                    .col
+                        a(href="").contacts.schedule Режим работы: 08:00 – 17:00
+                button.btn обратная связь
+        section.first__section
+            .container
+                .title__wrapper
+                    h1 
+                        |Бухгалтерское и налоговое сопровождение малого бизнеса <br>
+                        span 
+                            small от 
+                            | 1500 рублей в год
+                    p «Под ключ» от создания финансовой модели и регистрации ООО/ИП до подготовки и сдачи отчетности
+                .pluses__wrapper
+                    .plus
+                        .icon
+                            img(src="assets/images/icons/plus1.png", alt="")
+                        span Без предоплаты по договору
+                    .plus
+                        .icon
+                            img(src="assets/images/icons/plus2.png", alt="")
+                        span Снизим налоговые расходы до 50%
+                    .plus
+                        .icon
+                            img(src="assets/images/icons/plus3.png", alt="")
+                        span Взаимодействуем с ИФНС, ПФР и ФСС
+                .btn__wrapper
+                    button.btn калькулятор цены
+
+
 
         include pug/scripts.pug

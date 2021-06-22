@@ -1,8 +1,9 @@
 body
 {
     margin: 0;
-    color: #000;
-    background: #fff;
+    color: #1b191a;
+    background: #ffffff;
+    font-family: "OpenSans";
 }
 
 body.lock
@@ -31,6 +32,162 @@ button, a
 {
     cursor: pointer;
 }
+
+.logo
+{
+    display: flex;
+}
+
+header
+{
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    .container
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contacts__wrapper 
+{
+    display: flex;
+
+    .col
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px;
+    }
+
+    .contacts
+    {
+        font-size: 14px;
+        padding-left: 25px;
+        position: relative;
+    }
+
+    .contacts:after
+    {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .address:after
+    {
+        width: 15px;
+        height: 21px;
+        background: url(../images/icons/address.png);
+    }
+
+    .tel:after
+    {
+        width: 14px;
+        height: 22px;
+        background: url(../images/icons/phone.png);
+    }
+
+    .schedule:after
+    {
+        width: 19px;
+        height: 19px;
+        background: url(../images/icons/schedule.png);
+    }
+
+    .address
+    {
+        margin-bottom: 10px
+    }
+
+    .tel
+    {
+        font-size: 16px;
+    }
+}
+
+.btn
+{
+    min-width: 215px;
+    min-height: 45px;
+    border: none;
+    background: #fbd480;
+    font-family: 'OpenSans';
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+section.first__section
+{
+    padding: 150px 0;
+    color: #fff;
+    background: url(../images/bg/first_section.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 35% 100%, 0 70%);
+
+    .title__wrapper
+    {
+        
+        width: 55%;
+
+        h1
+        {
+            font-size: 37px;
+            display: block;
+            span
+            {
+                font-size: 42px;
+                color: #fbd480;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+
+        p 
+        {
+            font-size: 22px;
+        }
+    }
+
+    .pluses__wrapper
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 60px 0;
+
+        .icon
+        {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        span
+        {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+
+    .btn__wrapper
+    {
+        text-align: center;
+    }
+}
+
 
 
 @import 'responce';
