@@ -2,6 +2,8 @@ $(document).ready(Core);
 
 function Core()
 {
+    InitOwlCarousel();
+
     SetTabSwitcher();
     SetModal();
     SetNavbar();
@@ -113,4 +115,51 @@ function SetNavbar()
             $('header').removeClass('active')
         }
     })
+}
+
+function InitOwlCarousel()
+{
+    let owlWhatYouGet = $('section.what_you_get .owl-carousel').owlCarousel({
+        items: 1,
+        dots: true,
+        dotsContainer: $('section.what_you_get .dots__wrapper .dots'),
+        loop: true,
+        onInitialized(event) {
+            UpdateOwlWhatYouGet(event);
+        },
+        
+        onTranslated(event) {
+            UpdateOwlWhatYouGet(event);
+        }
+    });
+}
+
+function UpdateOwlWhatYouGet(event)
+{
+    let current = event.page.index == -1 ? 1 : event.page.index + 1;
+    
+    let total = event.item.count;
+    if (current < 10)
+    {
+        current = '0' + current;
+    }
+
+    if (total < 10)
+    {
+        total = '0' + total;
+    }
+
+    $('section.what_you_get .dots__wrapper .current .value').text(current);
+    $('section.what_you_get .dots__wrapper .total__count').text(total);
+
+    let positionOwlActiveItem = $('section.what_you_get .owl-item.active .text__wrapper').position();
+
+    positionOwlActiveItem = positionOwlActiveItem != undefined ? positionOwlActiveItem.top : undefined;
+
+    let heightOwlActiveItem = $('section.what_you_get .owl-item.active .text__wrapper').outerHeight();
+
+    $('section.what_you_get .dots__wrapper').css(`top`, `${positionOwlActiveItem + heightOwlActiveItem + 40}px`)
+
+
+    console.log(positionOwlActiveItem);
 }
