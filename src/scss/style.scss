@@ -786,4 +786,25 @@ section.reviews
     }
 }
 
+footer
+{
+    background: #242424;
+    padding: 20px 0;
+    color: #fff;
+
+    .container
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .col
+        {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+        }
+    }
+}
+
 @import 'responce';
