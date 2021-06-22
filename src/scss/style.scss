@@ -47,6 +47,7 @@ header
     top: 0;
     width: 100%;
     z-index: 100;
+    transition: 0.5s;
 
     .container
     {
@@ -54,6 +55,11 @@ header
         justify-content: space-between;
         align-items: center;
     }
+}
+
+header.active
+{
+    background: #242424;
 }
 
 .contacts__wrapper 
@@ -259,6 +265,48 @@ section.questions
             }
         }
     }
+}
+
+section.numers__section
+{
+    padding-top: 180px;
+    padding-bottom: 90px;
+    background: url(../images/bg/numbers_section.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    clip-path: polygon(77% 0, 100% 18%, 100% 100%, 0 100%, 0 33%);
+    .numbers__wrapper
+    {
+        display: flex;
+        justify-content: space-between;
+
+        .number
+        {
+            text-align: center;
+            width: 320px;
+
+            h2
+            {
+                font-size: 35px;
+                margin-top: 0;
+                margin-bottom: 10px;
+    
+                small
+                {
+                    font-size: 19px;
+                }
+            }
+    
+            span
+            {
+                font-size: 18px;
+            }
+        }
+
+        
+    }
+
 }
 
 @import 'responce';

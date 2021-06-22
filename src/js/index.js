@@ -4,6 +4,7 @@ function Core()
 {
     SetTabSwitcher();
     SetModal();
+    SetNavbar();
 }
 
 function SetTabSwitcher()
@@ -95,4 +96,21 @@ function HideModal(modalId)
         $(modalId + ' .modal__dialog').removeClass('fadeOutDownBig');
         $('.modal__backdrop').remove();
     });
+}
+
+function SetNavbar()
+{
+    $(window).scroll(function () {
+        let scrollY = this.scrollY
+        let verticalSliderHeight = $('.first__section')[0].scrollHeight;
+        
+        if (scrollY > verticalSliderHeight / 5)
+        {
+            $('header').addClass('active')
+        }
+        else
+        {
+            $('header').removeClass('active')
+        }
+    })
 }
