@@ -2,6 +2,7 @@ $(document).ready(Core);
 
 function Core()
 {
+    InitSimpleLightbox();
     InitOwlCarousel();
 
     SetTabSwitcher();
@@ -119,7 +120,7 @@ function SetNavbar()
 
 function InitOwlCarousel()
 {
-    let owlWhatYouGet = $('section.what_you_get .owl-carousel').owlCarousel({
+    $('section.what_you_get .owl-carousel').owlCarousel({
         items: 1,
         dots: true,
         dotsContainer: $('section.what_you_get .dots__wrapper .dots'),
@@ -132,6 +133,13 @@ function InitOwlCarousel()
             UpdateOwlWhatYouGet(event);
         }
     });
+
+    $('section.reviews .owl-carousel').owlCarousel({
+        items: 3,
+        dots: false,
+        nav: false,
+        loop: true,
+    })
 }
 
 function UpdateOwlWhatYouGet(event)
@@ -162,4 +170,9 @@ function UpdateOwlWhatYouGet(event)
 
 
     console.log(positionOwlActiveItem);
+}
+
+function InitSimpleLightbox() 
+{
+    $('section.reviews .item').simpleLightbox();
 }
