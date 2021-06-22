@@ -188,6 +188,77 @@ section.first__section
     }
 }
 
+section.questions
+{
+    padding: 80px 0;
 
+    .questions__wrapper
+    {
+        h2
+        {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+
+    .pluses__wrapper
+    {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        .plus
+        {
+            width: 345px;
+            height: 345px;
+            position: relative;
+
+            .desc
+            {
+                position: absolute;
+                height: 160px;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                padding: 20px;
+                font-size: 15px;
+                color: #fff;
+            }
+        }
+
+        .plus:nth-child(1)
+        {
+            background: url(../images/bg/quest_plus1.jpg);
+            background-size: cover;
+
+            .desc
+            {
+                background: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        .plus:nth-child(2)
+        {
+            background: url(../images/bg/quest_plus2.jpg);
+            background-size: cover;
+
+            .desc
+            {
+                background: rgba(0, 77, 70, 0.6);
+            }
+        }
+
+        .plus:nth-child(3)
+        {
+            background: url(../images/bg/quest_plus3.jpg);
+            background-size: cover;
+
+            .desc
+            {
+                background: rgba(0, 36, 77, 0.6);
+            }
+        }
+    }
+}
 
 @import 'responce';
