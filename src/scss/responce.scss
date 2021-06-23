@@ -376,14 +376,10 @@
 
     section.first__section .bg__video
     {
-        display: none;
+        transform: scale(5);
+        top: 75px;
+        left: -105px;
     }
-
-    section.first__section:after
-    {
-        content: none;
-    }
-
     section.questions .pluses__wrapper .plus .desc
     {
         height: auto;
