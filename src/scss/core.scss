@@ -228,18 +228,19 @@
 
 .btn__menu
 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border: none;
     position: relative;
     transition: 0.5s;
     background: none;
     display: none;
+    background: #fbd480;
 }
 
 .btn__menu:before, .btn__menu:after, .btn__menu span
 {
-    height: 2px;
+    height: 3px;
     position: absolute;
     background: #000;
     left: 50%;

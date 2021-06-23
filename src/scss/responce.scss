@@ -1,8 +1,49 @@
+@media(max-width: 1440px)
+{
+    section.first__section .bg__video
+    {
+        top: -50px;
+    }
+}
+
 @media(max-width: 1200px)
 {
     .container
     {
         max-width: 1024px;
+    }
+
+    section.first__section .bg__video
+    {
+        top: -10px;
+        transform: scale(1.5);
+    }
+
+    section.questions .pluses__wrapper .plus
+    {
+        width: 300px;
+        height: 300px;
+    }
+
+    section.banner__section .banner
+    {
+        padding-right: 310px;
+    }
+
+
+    .contacts__wrapper .col
+    {
+        margin: 0px;
+    }
+
+    .contacts__wrapper .col:first-child
+    {
+        margin-right: 10px;
+    }
+
+    section.first__section .title__wrapper
+    {
+        width: 70%;
     }
 }
 
@@ -12,6 +53,31 @@
     {
         max-width: 992px;
     }
+
+    header .container .contacts__wrapper 
+    {
+        display: none;
+    }
+
+    header .container .btn
+    {
+        display: none;
+    }
+
+    header .btn__menu 
+    {
+        display: block;
+    }
+
+    section.what_you_get .sldier__wrapper .item .image
+    {
+        max-width: 500px;
+    }
+
+    section.banner__section .banner.second
+    {
+        padding-right: 370px;
+    }
 }
 
 @media(max-width: 992px)
@@ -20,6 +86,136 @@
     {
         max-width: 768px;
     }
+
+    section.first__section .title__wrapper
+    {
+        width: 100%;
+    }
+
+    section.first__section .plus
+    {
+        width: 200px;
+        text-align: center;
+    }
+
+    section.first__section
+    {
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+
+    section.first__section .bg__video
+    {
+        transform: scale(1.7);
+    }
+
+    section.questions .questions__wrapper h2
+    {
+        font-size: 20px;
+    }
+
+    section.questions .pluses__wrapper
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .plus
+        {
+            margin: 25px;
+        }
+    }
+
+    section.numers__section .numbers__wrapper
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.numers__section .numbers__wrapper .number
+    {
+        margin-bottom: 25px;
+    }
+
+    section.yes__no__section .container .col
+    {
+        width: 100%;
+    }
+
+    section.yes__no__section .container .col:first-child
+    {
+        padding: 0;
+    }
+
+    section.banner__section .banner
+    {
+        width: 100%;
+    }
+
+    section.what_you_get .sldier__wrapper .item
+    {
+        flex-direction: column-reverse;
+    }
+
+    section.what_you_get .sldier__wrapper .item .text__wrapper
+    {
+        padding-right: 0;
+        margin-top: 25px;
+    }
+
+    
+
+    section.tariffs .wrapper
+    {
+        justify-content: center;
+    }
+
+    section.tariffs .wrapper .item
+    {
+        width: 340px;
+        
+        margin: 10px;
+    }
+
+    section.your__back .wrapper
+    {
+        flex-direction: column;
+    }
+
+    section.interaction .interaction__wrapper .item
+    {
+        width: 50%;
+       
+    }
+
+    section.interaction .interaction__wrapper .item:nth-child(n)
+    {
+        box-shadow: none;
+    }
+
+    section.interaction .interaction__wrapper .item:nth-child(1), 
+    section.interaction .interaction__wrapper .item:nth-child(4), 
+    section.interaction .interaction__wrapper .item:nth-child(5)
+    {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    footer .container
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 305px;
+
+        .btn
+        {
+            width: 100%;
+        }
+
+        .col
+        {
+            margin: 15px 0;
+        }
+    }
+
 }
 
 @media(max-width: 768px)
@@ -28,12 +224,161 @@
     {
         max-width: 576px;
     }
+
+    section.first__section .title__wrapper h1
+    {
+        font-size: 24px;
+    }
+
+    section.first__section .title__wrapper h1 span
+    {
+        font-size: 32px;
+    }
+
+    section.first__section .title__wrapper p
+    {
+        font-size: 16px;
+    }
+
+    section.first__section .plus
+    {
+        width: 165px;
+    }
+
+    header .logo
+    {
+        z-index: -1;
+    }
+
+    section.questions .questions__wrapper h2
+    {
+        margin-bottom: 15px;
+    }
+
+    section.banner__section .banner .person
+    {
+        display: none;
+    }
+
+    section.banner__section .banner
+    {
+        padding: 35px;
+    }
+
+    section.banner__section
+    {
+        padding-top: 80px;
+    }
+
+    section.interaction .interaction__wrapper .item
+    {
+        width: 100%;
+    }
+
+    section.interaction .interaction__wrapper .item:nth-child(n)
+    {
+        box-shadow: none;
+    }
+
+    section.interaction .interaction__wrapper .item:nth-child(2n)
+    {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    section.banner__section .banner.second
+    {
+        padding: 35px;
+    }
+
+    section.first__section .bg__video
+    {
+        transform: scale(2);
+    }
 }
 
 @media(max-width: 576px)
 {
     .container
     {
-        max-width: 320px;
+        max-width: 100%;
+    }
+
+    section.your__back .wrapper .image
+    {
+        width: 100%;
+    }
+
+    .sidebar__menu
+    {
+        right: -150%;
+    }
+
+    header
+    {
+        padding: 10px 0;
+
+        .logo
+        {
+            width: 200px;
+
+            img
+            {
+                width: 100%;
+            }
+        }
+    }
+
+    section.first__section
+    {
+        padding-top: 50px;
+        background: url(../images/bg/first_section.jpg);
+        background-size: cover;
+        background-position: 62%;
+        clip-path: polygon(0 0, 100% 0%, 100% 95%, 40% 100%, 0 97%);
+    }
+
+    section.first__section .title__wrapper h1 span
+    {
+        font-size: 26px;
+    }
+
+    section.first__section .pluses__wrapper
+    {
+        justify-content: center;
+
+        .plus
+        {
+            margin-bottom: 25px;
+        }
+    }
+
+    section.first__section .bg__video
+    {
+        display: none;
+    }
+
+    section.first__section:after
+    {
+        content: none;
+    }
+
+    section.questions .pluses__wrapper .plus .desc
+    {
+        height: auto;
+    }
+
+    section.numers__section
+    {
+        clip-path: polygon(74% 0, 100% 6%, 100% 100%, 0 100%, 0 12%);
+    }
+
+    section.tariffs
+    {
+        clip-path: polygon(100% 1%, 100% 97%, 71% 100%, 0 95%, 0 3%, 34% 0);
+    }
+
+    section.tariffs .title__wrapper
+    {
+        width: 100%;
     }
 }

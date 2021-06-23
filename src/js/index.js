@@ -116,6 +116,19 @@ function SetNavbar()
             $('header').removeClass('active')
         }
     })
+
+    $('header .btn__menu').on('click', function () {
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $('.sidebar__menu').removeClass('active');
+        }
+        else
+        {
+            $(this).addClass('active');
+            $('.sidebar__menu').addClass('active');
+        }
+    });
 }
 
 function InitOwlCarousel()
@@ -139,6 +152,17 @@ function InitOwlCarousel()
         dots: false,
         nav: false,
         loop: true,
+        responsive: {
+            992: {
+                items: 3
+            },
+            576: {
+                items: 2
+            },
+            0: {
+                items: 1
+            }
+        }
     })
 }
 
