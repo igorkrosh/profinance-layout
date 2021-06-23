@@ -342,16 +342,26 @@
 
     section.first__section
     {
-        padding-top: 50px;
+        padding-top: 100px;
         background: url(../images/bg/first_section.jpg);
         background-size: cover;
         background-position: 62%;
         clip-path: polygon(0 0, 100% 0%, 100% 95%, 40% 100%, 0 97%);
     }
 
+    section.first__section .title__wrapper h1
+    {
+        font-size: 36px;
+    }
+
     section.first__section .title__wrapper h1 span
     {
-        font-size: 26px;
+        font-size: 33px;
+    }
+
+    section.first__section .title__wrapper p
+    {
+        font-size: 18px;
     }
 
     section.first__section .pluses__wrapper
