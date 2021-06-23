@@ -4,10 +4,12 @@ function Core()
 {
     InitSimpleLightbox();
     InitOwlCarousel();
+    InitNoUiSlider();
 
     SetTabSwitcher();
     SetModal();
     SetNavbar();
+    SetCalculator();
 }
 
 function SetTabSwitcher()
@@ -199,4 +201,58 @@ function UpdateOwlWhatYouGet(event)
 function InitSimpleLightbox() 
 {
     $('section.reviews .item').simpleLightbox();
+}
+
+function InitNoUiSlider()
+{
+    if (document.getElementById('nouislider') == null)
+    {
+        return;
+    }
+
+    let htmlSlider = document.getElementById('nouislider');
+
+    noUiSlider.create(htmlSlider, {
+        start: 0,
+        range: {
+            'min': [0, 10],
+            '10%': [10, 20],
+            '25%': [70, 30],
+            '35%': [100, 50],
+            '65%': [400, 100],
+            'max': [1000]
+        },
+        connect: [true, false],
+    })
+
+    htmlSlider.noUiSlider.on('update', function(values) {
+        $('.nouislider .text .value').text(parseInt(values[0]))
+    })
+}
+
+function SetCalculator()
+{
+    $('form.calculator .plus__minus .plus').on('click', function(e) {
+        e.preventDefault();
+
+        let input = $(this).parent().find('input[type="number"]');
+        let value = $(input).val();
+        value++;
+        $(input).val(value);
+    })
+
+    $('form.calculator .plus__minus .minus').on('click', function(e) {
+        e.preventDefault();
+
+        let input = $(this).parent().find('input[type="number"]');
+        let value = $(input).val();
+        value--;
+
+        if (value <= 0)
+        {
+            return;
+        }
+        
+        $(input).val(value);
+    })
 }

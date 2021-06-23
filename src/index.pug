@@ -55,7 +55,7 @@ html(lang="ru")
                             img(src="assets/images/icons/plus3.png", alt="")
                         span Взаимодействуем с ИФНС, ПФР и ФСС
                 .btn__wrapper
-                    button.btn калькулятор цены
+                    button.btn(modal="modalCalc") калькулятор цены
         section.questions
             .container
                 .questions__wrapper
@@ -276,4 +276,5 @@ html(lang="ru")
                 .col
                     span Режим работы: 08:00 – 17:00
                 button.btn обратная связь
+        +Modal('modalCalc', 'ModalCalculator')
         include pug/scripts.pug

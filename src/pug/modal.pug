@@ -7,4 +7,51 @@ mixin Modal(id, modalTemplate)
 
 mixin ModalTemplate
     h1 ModalTemplate
+
+mixin ModalCalculator
+    h2 Калькулятор цены
+    form.calculator
+        .form__row
+            .form__group
+                label Форма организации
+                .select
+                    select 
+                        option(value="") ООО УСН 6 (до трех сотрудников)
+                        option(value="") ООО УСН 15 (до трех сотрудников)
+                        option(value="") ООО ОСН (до трех сотрудников)
+                        option(value="") ИП ПСН
+                        option(value="") ИП УСН6 +ПСН
+                        option(value="") ИП УСН15 +ПСН
+            .form__group
+                label Кол-во сотрудников
+                .plus__minus
+                    button.minus -
+                    input(type="number" value=1)
+                    button.plus +
+                    
+        .form__group 
+            label Кол-во операций по р/с (количество кассовых смен) за месяц
+            .nouislider
+                .text 
+                    |Кол-во операций: 
+                    span.value 0
+                #nouislider
+        .radio__wrapper
+            +InputRadio('type', 'Общепит')
+            +InputRadio('type', 'Производство')
+        .result__wrapper
+            .result
+                span.value 16 500 
+                |руб.\мес.
+            button.btn Заказать
+        .desc
+            b В указанную стоимость входит:
+            p - организация бухгалтерского и налогового учета;
+            p - обработка первичных документов;
+            p - расчет налогов на основании первичных документов,
+            p - формирование и передача бухгалтерской, налоговой, статистической отчетности;
+            p - консультирование по налогообложению;
+            p - расчет зарплаты и налогов;
+            p - кадровый учет.
+
     

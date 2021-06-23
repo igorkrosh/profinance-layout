@@ -294,6 +294,18 @@
     {
         transform: scale(2);
     }
+
+    #modalCalc .modal__content
+    {
+        width: 570px;
+        overflow-y: auto;
+        max-height: 85vh;
+    }
+
+    .btn__modal__close
+    {
+        z-index: 10;
+    }
 }
 
 @media(max-width: 576px)
@@ -380,5 +392,56 @@
     section.tariffs .title__wrapper
     {
         width: 100%;
+    }
+
+    #modalCalc .modal__content
+    {
+        width: 100%;
+    }
+
+    .modal .form__group label
+    {
+        font-size: 16px;
+    }
+
+    .modal .form__row
+    {
+        flex-direction: column;
+
+        .form__group:nth-child(1), .form__group:nth-child(2)
+        {
+            width: 100%;
+            padding: 0;
+        }
+
+        .form__group:nth-child(2)
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            label
+            {
+                margin-bottom: 0;
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .modal .result__wrapper
+    {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .modal .result__wrapper .result
+    {
+        width: 100%;
+    }
+
+    .modal .result__wrapper .btn
+    {
+        width: 100%;
+        margin-top: 15px;
     }
 }
