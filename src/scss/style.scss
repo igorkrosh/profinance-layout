@@ -4,6 +4,7 @@ body
     color: #1b191a;
     background: #ffffff;
     font-family: "OpenSans";
+    overflow-x: hidden;
 }
 
 body.lock
@@ -1127,6 +1128,15 @@ footer
             margin: 0;
             font-size: 15px
         }
+    }
+}
+
+form.callback
+{
+    input
+    {
+        width: 100%;
+        padding: 0 15px;
     }
 }
 

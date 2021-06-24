@@ -19,7 +19,7 @@ html(lang="ru")
                         a(href="").contacts.tel +7 (986) 726-00-08
                     .col
                         a(href="").contacts.schedule Режим работы: 08:00 – 17:00
-                button.btn обратная связь
+                button.btn(modal="modalCallback") обратная связь
                 button.btn__menu 
                     span
             .sidebar__menu
@@ -35,13 +35,13 @@ html(lang="ru")
             </video>
             .container
                 .title__wrapper
-                    h1 
+                    h1.wow.animate__fadeIn(data-wow-duration="0.5s" data-wow-delay="0s")
                         |Бухгалтерское и налоговое сопровождение малого бизнеса <br>
                         span 
                             small от 
                             | 1500 рублей в год
-                    p «Под ключ» от создания финансовой модели и регистрации ООО/ИП до подготовки и сдачи отчетности
-                .pluses__wrapper
+                    p.wow.animate__fadeIn(data-wow-duration="0.5s" data-wow-delay="0.5s") «Под ключ» от создания финансовой модели и регистрации ООО/ИП до подготовки и сдачи отчетности
+                .pluses__wrapper.wow.animate__fadeIn(data-wow-duration="0.5s" data-wow-delay="1s")
                     .plus
                         .icon
                             img(src="assets/images/icons/plus1.png", alt="")
@@ -54,15 +54,15 @@ html(lang="ru")
                         .icon
                             img(src="assets/images/icons/plus3.png", alt="")
                         span Взаимодействуем с ИФНС, ПФР и ФСС
-                .btn__wrapper
+                .btn__wrapper.wow.animate__fadeIn(data-wow-duration="0.5s" data-wow-delay="1.5s")
                     button.btn(modal="modalCalc") калькулятор цены
         section.questions
             .container
                 .questions__wrapper
-                    h2 Поступил запрос из ИФНС и нужно срочно отреагировать?
-                    h2 Возникли сложности с формированием и сдачей отчетности?
-                    h2 Уровень налоговой нагрузки вашей компании выше среднего?
-                .pluses__wrapper
+                    h2.wow.animate__fadeInLeft(data-wow-duration="0.5s" data-wow-delay="0.5s") Поступил запрос из ИФНС и нужно срочно отреагировать?
+                    h2.wow.animate__fadeInLeft(data-wow-duration="0.5s" data-wow-delay="1s") Возникли сложности с формированием и сдачей отчетности?
+                    h2.wow.animate__fadeInLeft(data-wow-duration="0.5s" data-wow-delay="1.5s") Уровень налоговой нагрузки вашей компании выше среднего?
+                .pluses__wrapper.wow.animate__fadeInUp(data-wow-duration="0.5s" data-wow-delay="1s")
                     .plus
                         .desc Окажем полный спектр услуг по ведению бухгалтерского и налогового учета, эффективному использованию финансовых ресурсов.
                     .plus
@@ -72,24 +72,24 @@ html(lang="ru")
         section.numers__section
             .container
                 .numbers__wrapper
-                    .number
+                    .number.wow.animate__zoomIn(data-wow-duration="0.5s" data-wow-delay="0.5s")
                         h2 
                             small более 
                             |1 000 000 
                             small налогов
                         span сэкономили и вернули<br> из бюджета
-                    .number
+                    .number.wow.animate__zoomIn(data-wow-duration="0.5s" data-wow-delay="1s")
                         h2 
                             |124 
                             small клиента
                         span ведем на аутсорсинге <br>сейчас
-                    .number
+                    .number.wow.animate__zoomIn(data-wow-duration="0.5s" data-wow-delay="1.5s")
                         h2 
                             |24/7 
                         span держим руку «на пульсе»<br> ваших дел
         section.yes__no__section
             .container
-                .col
+                .col.wow.animate__fadeInLeft(data-wow-duration="0.5s" data-wow-delay="0.5s")
                     h2 Это о вашей компании?
                     .wrapper.no
                         .item
@@ -102,7 +102,7 @@ html(lang="ru")
                             span Не желаете заниматься рутиной, а стремитесь продвигать бизнес
                         .item
                             span Опасаетесь налоговых проверок и не хотите платить штрафы
-                .col 
+                .col.wow.animate__fadeInRight(data-wow-duration="0.5s" data-wow-delay="1.5s")
                     h2 Доверьте нам следующие направления:
                     .wrapper.yes
                         .item
@@ -119,15 +119,15 @@ html(lang="ru")
                             span Окажем полный спектр юридических услуг – от составления договоров до представительства ваших интересов в суде
         section.banner__section
             .container
-                .banner
+                .banner.wow.animate__pulse(data-wow-duration="1s" data-wow-delay="0.5s")
                     h2 Закажите аутсорсинг бухгалтерских услуг и получите <b>СКИДКУ 20%</b> на первый месяц обслуживания
                     p.blue Спецпредложение действует до 30.06.2021 г.
-                    button.btn Заказать
+                    button(modal="modalCallback").btn Заказать
                     img(src="assets/images/bg/banner.png", alt="").person
         section.what_you_get
             .container
                 h2 Вы получите:
-                .sldier__wrapper
+                .sldier__wrapper.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.5s")
                     .owl-carousel
                         .item
                             .text__wrapper
@@ -163,7 +163,7 @@ html(lang="ru")
                     h2 Верните стоимость бухгалтерского аутсорсинга за счет сэкономленных нами налогов
                     p Выберите пакет услуг
                 .wrapper
-                    .item
+                    .item.wow.animate__fadeInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
                         .icon
                             img(src="assets/images/icons/tariff1.png", alt="")
                         .title Нулевая отчетность
@@ -173,8 +173,8 @@ html(lang="ru")
                                 | 1500
                             span руб.\мес.
                         .desc Подготовка и сдача в государственные органы все обязательной отчетности в электронном виде при отсутствии финансово-хозяйственной деятельности
-                        button.btn Выбрать
-                    .item
+                        button(modal="modalCallback").btn Выбрать
+                    .item.wow.animate__zoomIn(data-wow-duration="1s" data-wow-delay="1s")
                         .icon
                             img(src="assets/images/icons/tariff2.png", alt="")
                         .title Подготовка отчетности
@@ -184,8 +184,8 @@ html(lang="ru")
                                 | 3000
                             span руб.\мес.
                         .desc Подготовка и сдача в государственные органы все обязательной отчетности в электронном виде при наличии финансово-хозяйственной деятельности. Оптимизация налогооблажения
-                        button.btn Выбрать
-                    .item
+                        button(modal="modalCallback").btn Выбрать
+                    .item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1.5s")
                         .icon
                             img(src="assets/images/icons/tariff3.png", alt="")
                         .title Полное сопровождение
@@ -199,8 +199,8 @@ html(lang="ru")
         section.your__back
             .container
                 .wrapper
-                    img(src="assets/images/bg/your_back.png", alt="").image
-                    .text__wrapper
+                    img(src="assets/images/bg/your_back.png", alt="").image.wow.animate__fadeInLeft(data-wow-duration="1s" data-wow-delay="1.5s")
+                    .text__wrapper.wow.animate__fadeInRight(data-wow-duration="1s" data-wow-delay="0.5s")
                         h2 Мы – ваш тыл
                         p Имеем репутацию честных, скрупулезных и добросовестных специалистов.
                         p Наши бухгалтеры, юристы, экономисты имеют 10-летний стаж работы.
@@ -211,32 +211,32 @@ html(lang="ru")
             .container
                 h2 Выстроим удобное взаимодействие
                 .interaction__wrapper
-                    .item
+                    .item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.5s")
                         .icon
                             img(src="assets/images/icons/interaction1.png", alt="")
                         .title Разберемся в проблеме
                         .desc На основе вашего запроса проведем анализ ситуации, выясним потребности
-                    .item
+                    .item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s")
                         .icon
                             img(src="assets/images/icons/interaction2.png", alt="")
                         .title Сформируем четкие задачи
                         .desc Определим пути решения, поставим цели для понимания желаемых результатов
-                    .item
+                    .item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1.5s")
                         .icon
                             img(src="assets/images/icons/interaction3.png", alt="")
                         .title Подпишем договор
                         .desc Согласуем перечень услуг, просчитаем стоимость и сроки предоставления
-                    .item
+                    .item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="2s")
                         .icon
                             img(src="assets/images/icons/interaction4.png", alt="")
                         .title Примем документацию
                         .desc Проанализируем первичную документацию, выявим ошибки и недочеты
-                    .item
+                    .item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="2.5s")
                         .icon
                             img(src="assets/images/icons/interaction5.png", alt="")
                         .title Сформируем отчетность
                         .desc Обработаем документацию в 1С, рассчитаем налоги и подготовим отчеты
-                    .item
+                    .item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="3s")
                         .icon
                             img(src="assets/images/icons/interaction6.png", alt="")
                         .title Передадим в налоговую
@@ -245,7 +245,7 @@ html(lang="ru")
             .container
                 h2 Благодарственные письма
                 h3 Посмотрите, что говорят о наших услугах клиенты
-                .slider__wrapper
+                .slider__wrapper.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.5s")
                     .owl-carousel
                         .item__wrapper
                             a(href="assets/images/reviews/1.jpg").item
@@ -261,9 +261,9 @@ html(lang="ru")
                                 img(src="assets/images/reviews/1.jpg", alt="")
         section.banner__section
             .container
-                .banner.second
+                .banner.second.wow.animate__pulse(data-wow-duration="1s" data-wow-delay="0.5s")
                     h2 <span>Есть вопросы?</span> <br> Получите первичную консультацию  <b>БЕСПЛАТНО</b>
-                    button.btn Заказать
+                    button(modal="modalCallback").btn Заказать
                     img(src="assets/images/bg/banner2.png", alt="").person
         footer
             .container
@@ -275,6 +275,7 @@ html(lang="ru")
                     a(href="") info@pro-finance.me
                 .col
                     span Режим работы: 08:00 – 17:00
-                button.btn обратная связь
+                button(modal="modalCallback").btn обратная связь
         +Modal('modalCalc', 'ModalCalculator')
+        +Modal('modalCallback', 'ModalCallback')
         include pug/scripts.pug

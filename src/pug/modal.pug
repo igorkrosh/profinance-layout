@@ -56,4 +56,15 @@ mixin ModalCalculator
             p - расчет зарплаты и налогов;
             p - кадровый учет.
 
-    
+mixin ModalCallback
+    h2 Обратная связь
+    form.callback
+        .form__group
+            label Ваше имя
+            input(type="text" name="name")
+        .form__group
+            label Телефон
+            input(type="text" name="phone" required)
+        .form__group
+            label E-mail
+            input(type="text" name="mail")

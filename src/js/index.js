@@ -5,6 +5,7 @@ function Core()
     InitSimpleLightbox();
     InitOwlCarousel();
     InitNoUiSlider();
+    InitWoW();
 
     SetTabSwitcher();
     SetModal();
@@ -422,4 +423,12 @@ function CalculatePrice()
     }
 
     $('form.calculator .result__wrapper .result .value').text(new Intl.NumberFormat('ru-RU').format(result))    
+}
+
+function InitWoW()
+{
+    let wow = new WOW({
+        animateClass: 'animate__animated',
+    })
+    wow.init();
 }
