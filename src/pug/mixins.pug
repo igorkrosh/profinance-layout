@@ -8,9 +8,9 @@ mixin IncludeJS(filename)
     - let path = `assets/js/${filename}`
     script(src=path)
 
-mixin InputRadio(name, label)
+mixin InputRadio(name, label, value)
     label.radio= label
-        input(type="radio" name=name)
+        input(type="radio" name=name value=value)
         span.checkmark
 
 mixin BtnMenu()

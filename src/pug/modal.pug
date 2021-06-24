@@ -15,18 +15,18 @@ mixin ModalCalculator
             .form__group
                 label Форма организации
                 .select
-                    select 
-                        option(value="") ООО УСН 6 (до трех сотрудников)
-                        option(value="") ООО УСН 15 (до трех сотрудников)
-                        option(value="") ООО ОСН (до трех сотрудников)
-                        option(value="") ИП ПСН
-                        option(value="") ИП УСН6 +ПСН
-                        option(value="") ИП УСН15 +ПСН
+                    select(name="type-form")
+                        option(value="ooo_ysn_6") ООО УСН 6 (до трех сотрудников)
+                        option(value="ooo_ysn_15") ООО УСН 15 (до трех сотрудников)
+                        option(value="ooo_osn") ООО ОСН (до трех сотрудников)
+                        option(value="ip_psn") ИП ПСН
+                        option(value="ip_ysn_6") ИП УСН6 +ПСН
+                        option(value="ip_ysn_15") ИП УСН15 +ПСН
             .form__group
                 label Кол-во сотрудников
                 .plus__minus
                     button.minus -
-                    input(type="number" value=1)
+                    input(type="number" name="workers-count" value=0)
                     button.plus +
                     
         .form__group 
@@ -37,8 +37,10 @@ mixin ModalCalculator
                     span.value 0
                 #nouislider
         .radio__wrapper
-            +InputRadio('type', 'Общепит')
-            +InputRadio('type', 'Производство')
+            label.radio Общепит
+                input(type="radio" name='type' value='catering' checked)
+                span.checkmark
+            +InputRadio('type', 'Производство', 'manufacture')
         .result__wrapper
             .result
                 span.value 16 500 

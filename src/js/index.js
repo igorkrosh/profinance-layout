@@ -193,9 +193,6 @@ function UpdateOwlWhatYouGet(event)
     let heightOwlActiveItem = $('section.what_you_get .owl-item.active .text__wrapper').outerHeight();
 
     $('section.what_you_get .dots__wrapper').css(`top`, `${positionOwlActiveItem + heightOwlActiveItem + 40}px`)
-
-
-    console.log(positionOwlActiveItem);
 }
 
 function InitSimpleLightbox() 
@@ -227,6 +224,7 @@ function InitNoUiSlider()
 
     htmlSlider.noUiSlider.on('update', function(values) {
         $('.nouislider .text .value').text(parseInt(values[0]))
+        CalculatePrice();
     })
 }
 
@@ -239,6 +237,7 @@ function SetCalculator()
         let value = $(input).val();
         value++;
         $(input).val(value);
+        CalculatePrice();
     })
 
     $('form.calculator .plus__minus .minus').on('click', function(e) {
@@ -252,7 +251,175 @@ function SetCalculator()
         {
             return;
         }
-        
+
         $(input).val(value);
+        CalculatePrice();
     })
+
+    $('form.calculator select[name="type-form"]').on('change', CalculatePrice)
+    $('form.calculator input[name="type"]').on('change', CalculatePrice)
+}
+
+function CalculatePrice()
+{
+    let matrix = {
+        'ooo_ysn_6': {
+            0: 1000,
+            10: 4000,
+            30: 6000,
+            50: 7000,
+            70: 9000,
+            100: 11000,
+            150: 13000,
+            200: 15000,
+            250: 17000,
+            300: 19000,
+            350: 22000,
+            400: 25000,
+            500: 28000,
+            600: 31000,
+            700: 34000,
+            800: 37000,
+            900: 40000,
+            1000: 43000
+        },
+        'ooo_ysn_15': {
+            0: 1000,
+            10: 5000,
+            30: 7000,
+            50: 9000,
+            70: 11000,
+            100: 13000,
+            150: 15000,
+            200: 17000,
+            250: 19000,
+            300: 22000,
+            350: 25000,
+            400: 28000,
+            500: 31000,
+            600: 34000,
+            700: 37000,
+            800: 40000,
+            900: 43000,
+            1000: 46000
+        },
+        'ooo_osn': {
+            0: 1000,
+            10: 7000,
+            30: 9000,
+            50: 11000,
+            70: 13000,
+            100: 15000,
+            150: 17000,
+            200: 19000,
+            250: 22000,
+            300: 25000,
+            350: 28000,
+            400: 31000,
+            500: 34000,
+            600: 37000,
+            700: 40000,
+            800: 43000,
+            900: 46000,
+            1000: 49000
+        },
+        'ip_psn': {
+            0: 1000,
+            10: 1500,
+            30: 1500,
+            50: 1500,
+            70: 1500,
+            100: 1500,
+            150: 1500,
+            200: 1500,
+            250: 1500,
+            300: 1500,
+            350: 1500,
+            400: 1500,
+            500: 1500,
+            600: 1500,
+            700: 1500,
+            800: 1500,
+            900: 1500,
+            1000: 1500
+        },
+        'ip_ysn_6': {
+            0: 1000,
+            10: 1500,
+            30: 2000,
+            50: 2000,
+            70: 2000,
+            100: 2000,
+            150: 2000,
+            200: 2000,
+            250: 2000,
+            300: 2000,
+            350: 2000,
+            400: 2000,
+            500: 2000,
+            600: 2000,
+            700: 2000,
+            800: 2000,
+            900: 2000,
+            1000: 2000
+        },
+        'ip_ysn_15': {
+            0: 1000,
+            10: 4500,
+            30: 6500,
+            50: 8500,
+            70: 10500,
+            100: 12500,
+            150: 14500,
+            200: 16500,
+            250: 18500,
+            300: 21500,
+            350: 24500,
+            400: 27500,
+            500: 30500,
+            600: 33500,
+            700: 36500,
+            800: 39500,
+            900: 42500,
+            1000: 45500
+        }
+    }
+    let workerPrice = 500;
+    let cateringModifier = 2;
+    let manufactureModifier = 1.5;
+
+    let typeForm = $('form.calculator select[name="type-form"]').val();
+    let workersCount = parseInt($('form.calculator input[name="workers-count"]').val());
+    let operationsCount = parseInt($('form.calculator .nouislider .text .value').text());
+    let type = $('form.calculator input[name="type"]:checked').val();
+    
+    let result = 0;
+
+    result = matrix[typeForm][operationsCount];
+
+    if (typeForm == 'ooo_ysn_6' || typeForm == 'ooo_ysn_15' || typeForm == 'ooo_osn')
+    {
+        if (workersCount > 3)
+        {
+            result = result + (workersCount - 3) * workerPrice;
+        }
+    }
+    else
+    {
+        if (workersCount > 1)
+        {
+            result = result + (workersCount - 1) * workerPrice;
+        }
+    }
+
+    if (type == 'catering')
+    {
+        result = result * cateringModifier;
+    }
+    else
+    {
+        result = result * manufactureModifier;
+    }
+
+    $('form.calculator .result__wrapper .result .value').text(new Intl.NumberFormat('ru-RU').format(result))    
 }
